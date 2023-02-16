@@ -5,17 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq練習_1
+namespace Test
 {
     internal class Program
     {
         static void Main(string[] args)
-        {
-            var list = CreateList();
-
-        }
-
-        private List<Product> CreateList()
         {
             var path = @"Product.csv";
             using (StreamReader sr = new StreamReader(path))
@@ -24,24 +18,17 @@ namespace Linq練習_1
                 //先讓product第一行的種類被讀掉
                 string line = sr.ReadLine();
                 string[] product = new string[5];
+                int i = 0;
+
                 while ((line = sr.ReadLine()) != null)
                 {
-                    read.Add(line);
+                    product = line.Split(',');
+                    foreach (string s in product)
+                    {
+                        Console.WriteLine(s);
+                    }
                 }
-                return new List<Product>()
-                {   
-                    new Product
-                        {
-                            Number = int.Parse(product[0]),
-                            Name = product[1],
-                            Count = int.Parse(product[0]),
-                            Price = int.Parse(product[3]),
-                            Description = product[4]
-                        }
-                    
-                    };
             }
-
         }
     }
 }

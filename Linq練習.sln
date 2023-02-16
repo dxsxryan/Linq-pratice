@@ -5,6 +5,13 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq練習_1", "Linq練習_1\Linq練習_1.csproj", "{A63A9211-6906-4584-A6E4-8B9AE2FA3559}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項目", "{15AC8B48-52D6-4D95-A0A0-E5FD946FF4C0}"
+	ProjectSection(SolutionItems) = preProject
+		Linq練習_1\product.csv = Linq練習_1\product.csv
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{BDDE3EB9-D6EC-422D-B026-548195F2900D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{A63A9211-6906-4584-A6E4-8B9AE2FA3559}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63A9211-6906-4584-A6E4-8B9AE2FA3559}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63A9211-6906-4584-A6E4-8B9AE2FA3559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
