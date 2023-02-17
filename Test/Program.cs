@@ -17,17 +17,14 @@ namespace Test
                 List<string> read = new List<string>();
                 //先讓product第一行的種類被讀掉
                 string line = sr.ReadLine();
-                string[] product = new string[5];
-                int i = 0;
-
-                while ((line = sr.ReadLine()) != null)
+                string[] product = new string[] {};
+                line = sr.ReadToEnd();
+                product = line.Split(',');
+                for(int i = 0; i < product.Length; i++)
                 {
-                    product = line.Split(',');
-                    foreach (string s in product)
-                    {
-                        Console.WriteLine(s);
-                    }
+                    Console.WriteLine(product[i]);
                 }
+                
             }
         }
     }
