@@ -8,7 +8,7 @@ namespace Linq練習_1
 {
     internal class Product
     {
-        public int Number { get; set; }
+        public string Number { get; set; }
         public string Name { get; set; }
         public int Count { get; set; }
         public int Price { get; set; }
