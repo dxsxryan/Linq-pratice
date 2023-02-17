@@ -25,6 +25,10 @@ namespace Linq練習_1
             var sum_other = p.CreateList().Where((x) => x.Description == "飲料" || x.Description == "食品").Sum((x) => x.Price);
             var find = p.CreateList().Where((x) => x.Description == "食品");
             var gp = p.CreateList().GroupBy((x) => x.Description);
+            var filter_3C = p.CreateList().Where((x) => x.Price > 1000　&& x.Description == "3C");
+            var filter_drink = p.CreateList().Where((x) => x.Price > 1000 && x.Description == "飲料");
+            var filter_food = p.CreateList().Where((x) => x.Price > 1000 && x.Description == "食品");
+            var Count = p.CreateList().Count();
 
             Console.WriteLine($"所有商品的總價格為：{sum}\n");
             Console.WriteLine($"所有商品的平均價格為：{avg:n}\n");
@@ -35,9 +39,9 @@ namespace Linq練習_1
             Console.WriteLine($"產品類別為 3C 的商品總價為：{sum_3C} \n");
             Console.WriteLine($"產品類別為 飲料 和 食品 的商品總價為：{sum_other} \n");
             Console.WriteLine($"商品種類為 食品，而且商品數量大於100的商品為：\n");
-            foreach (var a in find) 
+            foreach (var a in find)
             {
-                if(a.Count > 100)
+                if (a.Count > 100)
                 {
                     Console.WriteLine($"{a.Name}\n");
                 }
@@ -46,19 +50,58 @@ namespace Linq練習_1
             foreach (var a in gp)
             {
                 Console.WriteLine($"商品種類：{a.Key}\n");
-                foreach(var b in a)
+                foreach (var b in a)
                 {
-                    if(b.Price > 1000)
+                    if (b.Price > 1000)
                     {
                         Console.WriteLine($"{b.Name}\n");
                     }
                 }
             }
-
-
-
-
-
+            Console.WriteLine($"各個商品類別中，商品的價格大於 1000 的商品平均價格為：\n");
+            int avg_3C1000 = 0; int i = 0;
+            foreach (var a in filter_3C)
+            {
+                i++;
+                avg_3C1000 += a.Price;
+            }
+            if (i == 0)
+            {
+                Console.WriteLine($"3C：沒有超過 1000 的商品\n");
+            }
+            else
+            {
+                Console.WriteLine($"3C：{avg_3C1000 / i}\n");
+            }
+            int avg_drink1000 = 0; i = 0;
+            foreach (var a in filter_drink)
+            {
+                i++;
+                avg_drink1000 += a.Price;
+            }
+            if(i == 0)
+            {
+                Console.WriteLine($"飲料：沒有超過 1000 的商品\n");
+            }
+            else
+            {
+                Console.WriteLine($"飲料：{avg_drink1000 / i}\n");
+            }
+            int avg_food1000 = 0; i = 0;
+            foreach (var a in filter_food)
+            {
+                i++;
+                avg_food1000 += a.Price;
+                Console.WriteLine(a.Name);
+            }
+            if (i == 0)
+            {
+                Console.WriteLine($"食品：沒有超過 1000 的商品\n");
+            }
+            else
+            {
+                Console.WriteLine($"食品：{avg_food1000 / i}\n");
+            }
         }
 
         public List<Product> CreateList()
