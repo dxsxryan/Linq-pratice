@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{BDDE3EB9-D6EC-422D-B026-548195F2900D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1A2B_game", "1A2B_game\1A2B_game.csproj", "{B7ADD998-6C09-4A2B-B3D8-FB49B4CB92F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDDE3EB9-D6EC-422D-B026-548195F2900D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7ADD998-6C09-4A2B-B3D8-FB49B4CB92F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7ADD998-6C09-4A2B-B3D8-FB49B4CB92F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7ADD998-6C09-4A2B-B3D8-FB49B4CB92F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7ADD998-6C09-4A2B-B3D8-FB49B4CB92F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

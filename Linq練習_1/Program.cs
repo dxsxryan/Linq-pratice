@@ -165,7 +165,7 @@ Step2:      Console.Write("請輸入想要進入的分頁(要結束請按Q)：")
                 for (i = 0; i < 4; i++)
                 {
                     var good_4 = list.ElementAt(i);
-                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}");
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}\n");
                 }
                 goto Step2;
             }
@@ -175,7 +175,7 @@ Step2:      Console.Write("請輸入想要進入的分頁(要結束請按Q)：")
                 for (i = 4; i < 8; i++)
                 {
                     var good_4 = list.ElementAt(i);
-                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}"); 
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}\n"); 
                 }
                 goto Step2;
             }
@@ -185,7 +185,7 @@ Step2:      Console.Write("請輸入想要進入的分頁(要結束請按Q)：")
                 for (i = 8; i < 12; i++)
                 {
                     var good_4 = list.ElementAt(i);
-                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}"); 
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}\n"); 
                 }
                 goto Step2;
             }
@@ -195,7 +195,7 @@ Step2:      Console.Write("請輸入想要進入的分頁(要結束請按Q)：")
                 for (i = 12; i < 16; i++)
                 {
                     var good_4 = list.ElementAt(i);
-                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}");
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}\n");
                 }
                 goto Step2;
             }
