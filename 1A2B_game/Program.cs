@@ -12,6 +12,8 @@ namespace _1A2B_game
         {
 begin:      Console.WriteLine("歡迎來到1A2B猜數字遊戲～");
             Console.WriteLine("------");
+
+            //讓電腦生成隨機亂數
             int[] random = Enumerable.Range(0, 10).OrderBy(x => Guid.NewGuid()).ToArray();
             int[] comp = random.Take(4).ToArray();
             foreach(var a in comp)
@@ -19,6 +21,8 @@ begin:      Console.WriteLine("歡迎來到1A2B猜數字遊戲～");
                 Console.Write(a);
             }
             Console.WriteLine();
+
+            //讀取玩家輸入的4個數字
             int[] ans = new int[4];
 replay:     Console.Write("請輸入 4 個數字 :");
             for (int i = 0; i < 4; i++)
@@ -26,6 +30,8 @@ replay:     Console.Write("請輸入 4 個數字 :");
                 ans[i] = Console.Read() - 48;
             }
             Console.ReadLine();
+
+            //比對玩家和電腦的答案
             int A = 0; int B = 0;
             for (int i = 0; i < 4; i++)
             {
@@ -34,11 +40,15 @@ replay:     Console.Write("請輸入 4 個數字 :");
             }
             Console.WriteLine($"判定結果是{A}A{B}B");
             Console.WriteLine("------");
+            
+            //如果沒有完全猜對 就重複猜至正確
             if(A != 4)
             {
                 goto replay;
             }
             Console.WriteLine("恭喜你！猜對了！！");
+
+            //詢問玩家是否開啟新的一局
 ask:        Console.WriteLine("要繼續遊玩嗎？(y/n)");
             var re = Console.ReadLine();
             if(re == "y")
