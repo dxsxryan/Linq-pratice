@@ -16,7 +16,7 @@ namespace Linq練習_1
             var list = p.CreateList();
 
             //第一題
-            var sum = list.Sum(x => x.Price);
+Step1:      var sum = list.Sum(x => x.Price);
             Console.WriteLine($"所有商品的總價格為：{sum}\n");
 
             //第二題
@@ -146,6 +146,73 @@ namespace Linq練習_1
                 Console.WriteLine($"{a.Name} - {a.Price} 元\n");
             }
 
+            //第十七題
+            Console.WriteLine("上面的資料看好了 請按下任意鍵進入分頁選擇器\n");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("總共有5個分頁，第一個分頁就會回到前面1~16題的題目\n");
+            Console.WriteLine("後面的2~5的分頁才是其他東西\n");
+Step2:      Console.Write("請輸入想要進入的分頁(要結束請按Q)：");
+            string page = Console.ReadLine();
+            if (page == "1")
+            {
+                Console.WriteLine("那就往前跳到剛剛的題目\n");
+                goto Step1;
+            }
+            else if (page == "2")
+            {
+                Console.Clear();
+                for (i = 0; i < 4; i++)
+                {
+                    var good_4 = list.ElementAt(i);
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}");
+                }
+                goto Step2;
+            }
+            else if(page == "3")
+            {
+                Console.Clear();
+                for (i = 4; i < 8; i++)
+                {
+                    var good_4 = list.ElementAt(i);
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}"); 
+                }
+                goto Step2;
+            }
+            else if (page == "4")
+            {
+                Console.Clear();
+                for (i = 8; i < 12; i++)
+                {
+                    var good_4 = list.ElementAt(i);
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}"); 
+                }
+                goto Step2;
+            }
+            else if (page == "5")
+            {
+                Console.Clear();
+                for (i = 12; i < 16; i++)
+                {
+                    var good_4 = list.ElementAt(i);
+                    Console.WriteLine($"{good_4.Number} {good_4.Name} {good_4.Price} {good_4.Count} {good_4.Description}");
+                }
+                goto Step2;
+            }
+            else if(page == "q" || page == "Q")
+            {
+                Console.Clear();
+                Console.WriteLine("88辣");
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("都說了只有5個分頁了\n");
+                Console.WriteLine("還輸入其他東西\n");
+                Console.ReadKey();
+                Console.WriteLine("很皮喔\n");
+                goto Step2;
+            }
 
 
         }
